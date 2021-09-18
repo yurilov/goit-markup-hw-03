@@ -16,11 +16,16 @@ body {
   letter-spacing: 0.03em;
 }
 
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
 /* Лого */
 
-.logo,
-.logo.top,
-.logo.bottom {
+.logo {
   font-family: 'Raleway', sans-serif;
   color: var(--accent-color);
   font-size: 26px;
