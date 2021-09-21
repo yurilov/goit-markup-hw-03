@@ -11,6 +11,7 @@
   --hero-button-shadow: rgba(0, 0, 0, 0.15);
   --hero-button-hover: #188ce8;
   --portfolio-border: #eeeeee;
+  --portfolio-gap: 30px;
 }
 
 body {
@@ -325,11 +326,14 @@ ul {
 .portfolio {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  margin-top: calc(-1 * var(--portfolio-gap));
+  margin-left: calc(-1 * var(--portfolio-gap));
 }
 
-.portfolio .list-item:not(:nth-last-child(-n + 3)) {
-  margin-bottom: 30px;
+.portfolio .list-item {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-top: var(--portfolio-gap);
+  margin-left: var(--portfolio-gap);
 }
 
 .portfolio .link > img {
@@ -337,7 +341,7 @@ ul {
 }
 
 .portfolio-container {
-  width: 370px;
+  width: 100%;
   padding: 20px 24px;
   border: 1px solid var(--portfolio-border);
   border-top: none;
